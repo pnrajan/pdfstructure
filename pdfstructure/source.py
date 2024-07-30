@@ -87,6 +87,8 @@ class FileSource(Source):
         wrapper.page = container.page
         stack = []
         for line in container:
+            if not isinstance(line, LTTextLine):  # this could be not real "text_line"
+                continue
             size = max([obj.size for obj in itertools.islice(line, 10) if isinstance(obj, LTChar)])
             if not stack:
                 wrapper.add(line)
