@@ -3,7 +3,7 @@ from typing import Generator, Any
 
 from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LAParams, LTFigure, LTTextBoxHorizontal, LTTextLineHorizontal, LTChar, \
-    LTTextBoxVertical
+    LTTextBoxVertical,LTTextLine
 
 
 class Source:
